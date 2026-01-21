@@ -4,3 +4,14 @@
     align-items: flex-start;
     width: 100%;
 }
+
+@media (max-width:1024px) {
+
+    .content-container {
+        align-items: flex-start;
+    }
+
+    .logo-container {
+        display: none;
+    }
+}

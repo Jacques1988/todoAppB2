@@ -10,7 +10,25 @@ body {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    /*  background-color: blue; */
+    /* background-color: blue; */
     width: 100%;
     max-width: 1450px;
+
+}
+
+.teaser {
+    font-size: 3rem;
+}
+
+@media (max-width:1024px) {
+    .content-container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width:480px) {
+
+    .teaser {
+        font-size: 2rem;
+    }
 }
