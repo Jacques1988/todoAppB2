@@ -1,0 +1,10 @@
+.teaser {
+    font-size: 3rem;
+}
+
+@media (max-width:480px) {
+
+    .teaser {
+        font-size: 2rem;
+    }
+}

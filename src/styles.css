@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
+    background-color: whitesmoke !important;
     padding: 0;
     margin: 0;
 }
@@ -13,26 +14,15 @@ body {
     /* background-color: blue; */
     width: 100%;
     max-width: 1450px;
-    padding: 0 1rem 0 1rem;
-
+    padding: 5rem 1rem 0 1rem;
 }
 
-.teaser {
-    font-size: 3rem;
-}
+
 
 @media (max-width:1024px) {
     .content-container {
         padding: 1rem;
     }
 }
-
-@media (max-width:480px) {
-
-    .teaser {
-        font-size: 2rem;
-    }
-}
-
 
 /* ####### Ready for refactoring later ############## */
