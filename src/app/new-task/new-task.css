@@ -1,0 +1,37 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.content-container {
+    align-items: flex-start;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.new-task-input {
+    font-size: 1.5rem;
+    outline: none;
+    width: 100%;
+    padding: 0.75rem 0 0.75rem 0;
+    margin-right: 1rem;
+}
+
+@media (max-width:768px) {
+    .input-container {
+        flex-direction: column;
+    }
+
+    .new-task-input {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+}
