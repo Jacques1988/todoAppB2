@@ -1,0 +1,10 @@
+<section class="content-container">
+  <app-teaser [text]="teaser()"></app-teaser>
+  <ul class="list-group">
+    @if (tasks()) {
+      @for (task of tasks(); track task.id) {
+        <app-task-component [task]="task"></app-task-component>
+      }
+    }
+  </ul>
+</section>
