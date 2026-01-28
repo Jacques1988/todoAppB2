@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Teaser } from '../shared/components/teaser/teaser';
 import { MainButton } from '../shared/components/main-button/main-button';
 
@@ -8,4 +8,6 @@ import { MainButton } from '../shared/components/main-button/main-button';
   templateUrl: './new-task.html',
   styleUrl: './new-task.css',
 })
-export class NewTask {}
+export class NewTask {
+  teaser = signal<string>('Add a New Task');
+}
