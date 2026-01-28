@@ -12,8 +12,4 @@ import { TaskService } from '../services/task-service';
 export class TaskList {
   teaser = signal<string>('Task List');
   tasks = inject(TaskService).getAllTasks();
-
-  /*  ngOnInit() {
-    console.log(this.tasks());
-  } */
 }
