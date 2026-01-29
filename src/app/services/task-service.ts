@@ -6,9 +6,20 @@ import { Task } from '../shared/models/task';
   providedIn: 'root',
 })
 export class TaskService {
-  tasks = signal<Task[]>(todos);
+  todoList = todos;
+  tasks = signal<Task[]>(this.todoList);
 
   getAllTasks() {
     return this.tasks;
+  }
+
+  addNewTask(taskName: string) {
+    const newTask = {
+      id: this.todoList.length + 1,
+      task: taskName,
+      status: 'incomplete',
+      checked: false,
+    };
+    this.todoList.push(newTask);
   }
 }
