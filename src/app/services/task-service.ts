@@ -22,4 +22,13 @@ export class TaskService {
     };
     this.todoList.push(newTask);
   }
+
+  updateTask(todo: Task) {
+    this.todoList = this.todoList.map((task) => {
+      if (task.id === todo.id) {
+        return todo;
+      }
+      return task;
+    });
+  }
 }
