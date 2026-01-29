@@ -1,5 +1,12 @@
 <li class="list-group-item">
-  <input [checked]="task().checked" class="task-checkbox" type="checkbox" />
-  <span class="task-text">{{ task().task }}</span>
+  <input
+    [checked]="task().checked"
+    class="task-checkbox"
+    type="checkbox"
+    (change)="toggleTask()"
+  />
+  <span [class]="{ 'text-stroke': this.task().checked }" class="task-text">{{
+    task().task
+  }}</span>
   <span class="task-text status">{{ task().status }}</span>
 </li>
