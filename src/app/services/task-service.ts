@@ -10,6 +10,7 @@ export class TaskService {
   tasks = signal<Task[]>(this.todoList);
 
   getAllTasks() {
+    this.tasks.set(this.todoList);
     return this.tasks;
   }
 
@@ -30,5 +31,19 @@ export class TaskService {
       }
       return task;
     });
+  }
+
+  getIncompletedTasks() {
+    const incompleteTasks = this.todoList.filter(
+      (task) => task.status === 'incomplete',
+    );
+    this.tasks.set(incompleteTasks);
+  }
+
+  getCompletedTasks() {
+    const completedTasks = this.todoList.filter(
+      (task) => task.status === 'completed',
+    );
+    this.tasks.set(completedTasks);
   }
 }

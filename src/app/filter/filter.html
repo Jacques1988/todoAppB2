@@ -1,8 +1,17 @@
 <section class="content-container">
   <app-teaser [text]="teaser()"></app-teaser>
   <div class="button-container">
-    <app-main-button [btnText]="'All Tasks'"></app-main-button>
-    <app-main-button [btnText]="'Completed'"></app-main-button>
-    <app-main-button [btnText]="'Incomplete'"></app-main-button>
+    <app-main-button
+      [btnText]="'All Tasks'"
+      (click)="taskService.getAllTasks()"
+    ></app-main-button>
+    <app-main-button
+      [btnText]="'Completed'"
+      (click)="taskService.getCompletedTasks()"
+    ></app-main-button>
+    <app-main-button
+      [btnText]="'Incomplete'"
+      (click)="taskService.getIncompletedTasks()"
+    ></app-main-button>
   </div>
 </section>
