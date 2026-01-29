@@ -1,7 +1,12 @@
 <section class="content-container">
   <app-teaser [text]="teaser()"></app-teaser>
   <div class="input-container">
-    <input class="new-task-input" type="text" placeholder="Add a new Task" />
-    <app-main-button [btnText]="'Add'"></app-main-button>
+    <input
+      #newTaskInput
+      class="new-task-input"
+      type="text"
+      placeholder="Add a new Task"
+    />
+    <app-main-button [btnText]="'Add'" (click)="addNewTask()"></app-main-button>
   </div>
 </section>
